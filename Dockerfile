@@ -10,6 +10,7 @@ RUN dpkg --add-architecture i386 \
     && wget https://dl.winehq.org/wine-builds/winehq.key \
     && apt-key add winehq.key \
     && rm winehq.key \
+    && apt-add-repository ppa:cybermax-dexter/sdl2-backport \
     && apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ \
     && apt-get update \
     && apt-get install -y winehq-stable \
